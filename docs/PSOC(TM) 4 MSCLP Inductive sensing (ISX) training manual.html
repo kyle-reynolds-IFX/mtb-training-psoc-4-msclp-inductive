@@ -1,0 +1,1338 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="PSOC™ 4 Inductive sensing training manual.">
+      
+      
+        <meta name="author" content="Infineon Technologies">
+      
+      
+      
+        <link rel="prev" href="index.html">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Training manual - PSOC™ 4 Inductive Sensing Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#psoctm-4-inductive-sensing-isx-training-manual" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="index.html" title="PSOC™ 4 Inductive Sensing Training" class="md-header__button md-logo" aria-label="PSOC™ 4 Inductive Sensing Training" data-md-component="logo">
+      
+  <img src="assets/images/infineon_logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PSOC™ 4 Inductive Sensing Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Training manual
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/kyle-reynolds-IFX/mtb-training-psoc-4-msclp-inductive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kyle-reynolds-IFX/mtb-training-psoc-4-msclp-inductive
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="PSOC™ 4 Inductive Sensing Training" class="md-nav__button md-logo" aria-label="PSOC™ 4 Inductive Sensing Training" data-md-component="logo">
+      
+  <img src="assets/images/infineon_logo.png" alt="logo">
+
+    </a>
+    PSOC™ 4 Inductive Sensing Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/kyle-reynolds-IFX/mtb-training-psoc-4-msclp-inductive" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    kyle-reynolds-IFX/mtb-training-psoc-4-msclp-inductive
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training manual
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="PSOC%28TM%29%204%20MSCLP%20Inductive%20sensing%20%28ISX%29%20training%20manual.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Training manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-this-document" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        About this document
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scope-and-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope and purpose
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intended-audience" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intended audience
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of contents
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-development-tools-and-prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required development tools and prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inductive-sensor-manual-tuning-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inductive sensor manual tuning procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inductive-sensor-with-smart-sensing-tuning-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Inductive sensor with smart sensing tuning procedure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revision-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Revision history
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disclaimer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Disclaimer
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="psoctm-4-inductive-sensing-isx-training-manual">PSOC&trade; 4 Inductive sensing (ISX) training manual<a class="headerlink" href="#psoctm-4-inductive-sensing-isx-training-manual" title="Permanent link">&para;</a></h1>
+<h2 id="about-this-document">About this document<a class="headerlink" href="#about-this-document" title="Permanent link">&para;</a></h2>
+<p>This training manual covers the labs for the introduction to inductive sensing (ISX) on the PSOC&trade; 4000T and the PSOC&trade; 4100T Plus.</p>
+<h2 id="scope-and-purpose">Scope and purpose<a class="headerlink" href="#scope-and-purpose" title="Permanent link">&para;</a></h2>
+<p>The manual covers the following objectives: project creation, manual tuning of inductive sensors, tuning of inductive sensors using the smart sensing algorithm, and key takeaways.</p>
+<h2 id="intended-audience">Intended audience<a class="headerlink" href="#intended-audience" title="Permanent link">&para;</a></h2>
+<p>This manual is intended for design engineers, technicians, and developers of electronic systems.</p>
+<h2 id="table-of-contents">Table of contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#about-this-document">About this document</a></li>
+<li><a href="#scope-and-purpose">Scope and purpose</a></li>
+<li><a href="#intended-audience">Intended audience</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#_Required_development_tools">Required development tools and prerequisites</a></li>
+<li><a href="#inductive-sensor-manual-tuning-procedure">Inductive sensor manual tuning procedure</a></li>
+<li><a href="#inductive-sensor-with-smart-sensing-tuning-procedure">Inductive sensor with smart sensing tuning procedure</a></li>
+<li><a href="#references">References</a></li>
+<li><a href="#revision-history">Revision history</a></li>
+</ul>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>This manual provides instructions to create, configure, and build the <strong>PSOC&trade; 4000T MSCLP inductive sensing touch-over-metal keypad-4</strong> project to optimise the inductive sensor performance and enable a smart sensing algorithm.</p>
+<h2 id="required-development-tools-and-prerequisites"><span id="_Required_development_tools"></span>Required development tools and prerequisites<a class="headerlink" href="#required-development-tools-and-prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ModusToolbox&trade; software</strong> v3.9 or later (Recommended installation via <a href="https://softwaretools.infineon.com/tools/com.ifx.tb.tool.modustoolboxsetup">ModusToolbox&trade; Setup tool</a>)</li>
+<li><a href="https://code.visualstudio.com/"><strong>Microsoft Visual Studio Code</strong></a> with the <a href="https://marketplace.visualstudio.com/items?itemName=InfineonAG.modustoolbox-for-vscode"><strong>ModusToolbox&trade; for VS Code</strong></a> extension installed</li>
+<li><strong>ModusToolbox&trade; Programming Tools</strong> v1.9.0 or later (Installed by <a href="https://softwaretools.infineon.com/tools/com.ifx.tb.tool.modustoolboxsetup">ModusToolbox&trade; Setup tool</a> as a dependency to ModusToolbox&trade; v3.9)</li>
+<li><strong>ModusToolbox&trade; CAPSENSE&trade; and Multi-Sense Pack</strong> v1.6.0 or later (Recommended installation via <a href="https://softwaretools.infineon.com/tools/com.ifx.tb.tool.modustoolboxsetup">ModusToolbox&trade; Setup tool</a>)</li>
+<li>An oscilloscope and DMM for inductive sensor tuning and power measurements</li>
+<li><a href="https://www.infineon.com/evaluation-board/CY8CPROTO-040T-MS"><strong>CY8CPROTO-040T-MS</strong></a>, the PSOC&trade; 4000T Multi-Sense Prototyping Kit</li>
+</ul>
+<div class="figure-images">
+<img src="assets/images/psoc_4000t_multi_sense_prototyping_kit.png" alt="PSOC&trade; 4000T Multi-Sense Prototyping Kit" style="width:456px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://infineon-academy.csod.com/ui/lms-learning-details/app/course/073efb2e-7bbc-45ab-819d-12c504682ec0">Introduction to PSOC&trade; 4000T Training</a></li>
+<li>Install the software and obtain the hardware listed in the Required development tools section.</li>
+</ul>
+<h2 id="inductive-sensor-manual-tuning-procedure">Inductive sensor manual tuning procedure<a class="headerlink" href="#inductive-sensor-manual-tuning-procedure" title="Permanent link">&para;</a></h2>
+<h3 id="objective">Objective<a class="headerlink" href="#objective" title="Permanent link">&para;</a></h3>
+<p>The objective of this exercise is to learn how to use the Inductive sensing (ISX) performance tuning process. The MSCLP Inductive sensing touch over Metal Keypad-2 example project will have the device configured for optimal inductive sensor tuning, but tweaks can be made to show how each setting impacts the sensitivity of the sensors.</p>
+<h3 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h3>
+<p>When tuning the inductive sensor, it is recommended to do the following performance tuning procedure. This process comprises four stages</p>
+<ol>
+<li>
+<p><a href="#_Stage_1_–">Set the initial hardware parameters</a></p>
+</li>
+<li>
+<p><a href="#_Stage_2_–">Set the Lx clock divider</a></p>
+</li>
+<li>
+<p><a href="#_Stage_3_–_1">Fine-tune for the required SNR</a></p>
+</li>
+<li>
+<p><a href="#_Stage_4_–_1">Tune threshold parameters</a></p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/low_power_widget_tuning_flow.png" alt="Low power widget tuning flow" style="width:447px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<h3 id="project-creation">Project creation<a class="headerlink" href="#project-creation" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Before creating the first project in this training series, create the workspace. Open <strong>VS Code</strong> from the <strong>Windows Start</strong> menu</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> If you have not installed ModusToolbox&trade; along with the ModusToolbox&trade; for VS Code extension, see the <a href="#_Required_development_tools">Required development tools</a> section.</p>
+</blockquote>
+<p><img src="assets/images/running_vs_code_from_the_windows_11_search_bar.png" alt="Running VS Code from the Windows 11 Search Bar" style="width:368px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="2">
+<li>Open a <strong>workspace directory</strong> for your project in VS Code</li>
+</ol>
+<p><img src="assets/images/opening_vs_code_workspace.png" alt="Opening VS Code Workspace" style="width:466px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="3">
+<li>Click <strong>File &gt; Open Folder</strong> and choose your workspace directory or create a new folder</li>
+<li>Click <strong>Select Folder</strong> to open the workspace directory in VS Code</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Open the workspace in trusted mode. If the default workspace trust is restricted mode, click <strong>Restricted Mode</strong> in the bottom left and change to trust this folder.</p>
+</blockquote>
+<p><img src="assets/images/workspace_opened_in_restricted_mode.png" alt="Opening VS Code Workspace" style="width:738px; height:auto; display:block; margin:0 auto;" /></p>
+<p><img src="assets/images/opening_workspace_in_trusted_mode.png" alt="Opening VS Code Workspace" style="width:1200px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="5">
+<li>Open the <strong>Command Palette</strong> by pressing <strong>Ctrl+Shift+P</strong></li>
+<li>Search for <strong>Infineon ModusToolbox&trade;: Show Main Page</strong> and select it</li>
+<li>Open the <strong>Infineon ModusToolbox&trade; for VS Code</strong> main page</li>
+</ol>
+<p><img src="assets/images/modustoolbox_for_vs_code_main_page.png" alt="ModusToolbox for VS Code Main Page" style="width:1000px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="8">
+<li>
+<p>Navigate to the <strong>Create Project</strong> tab and click <strong>Launch Project Creation</strong></p>
+</li>
+<li>
+<p>The <strong>Project Creator Tool</strong> opens and prompts you to choose a <strong>BSP</strong> (Board Support Package). Select the <strong>CY8CPROTO-040T-MS BSP</strong> under the <strong>PSOC&trade; 4 BSPs</strong>, and continue to the application selection</p>
+</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> BSPs are aligned with the development and evaluation kits; they provide files for basic device functionality. A BSP typically has a <strong>design.modus</strong> file that configures clocks and other board-specific capabilities. That file is used by the ModusToolbox&trade; configurators. A BSP also includes the required device support code for the device on the board. You can modify the configuration to suit your application.</p>
+</blockquote>
+<p><img src="assets/images/select_the_cy8proto_040t_ms_bsp.png" alt="Project Creator BSP Selection" style="width:800px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="10">
+<li>Select the <strong>MSCLP Inductive Sensing Touch over Metal Keypad-2</strong> under the <strong>Sensing</strong> section, choose a project directory, and create the project</li>
+</ol>
+<p><img src="assets/images/isx_2_button_project_creator_example_code_project_creation.png" alt="Project Creator application selection" style="width:800px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="11">
+<li>When project creation is complete, it will prompt you to <strong>Load Project</strong>. Do this so that the VS Code workspace for the new project is loaded</li>
+</ol>
+<p><img src="assets/images/isx_2_button_load_project_vscode.png" alt="Load Project in VS Code" style="width:400px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="12">
+<li>Once the workspace is loaded, the ModusToolbox&trade; application view provides actions to build, clean, erase, program, and configure the device</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_vscode_mtb_extension.png" alt="MSCLP inductive sensing project in the ModusToolbox VS Code extension" style="width:1000px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<blockquote>
+<p><strong>Note:</strong> The ModusToolbox&trade; for VS Code extension may display buttons indicating that the VS Code tasks and settings need to be updated. Simply click the buttons to correct the issues. This is a minor version mismatch between the ModusToolbox&trade; tools and the VS Code extension and does not affect functionality.</p>
+</blockquote>
+<p><img src="assets/images/vscode_fix_settings_and_tasks.png" alt="VS Code extension prompting to fix tasks and settings" style="width:800px; height:auto; display:block; margin:0 auto;" /></p>
+<h3 id="calibration-procedure">Calibration procedure<a class="headerlink" href="#calibration-procedure" title="Permanent link">&para;</a></h3>
+<h4 id="stage-1-set-the-initial-hardware-parameters"><span id="_Stage_1_–"></span>Stage 1 – Set the initial hardware parameters<a class="headerlink" href="#stage-1-set-the-initial-hardware-parameters" title="Permanent link">&para;</a></h4>
+<p>The initial hardware parameters include:</p>
+<ul>
+<li>CAPSENSE&trade; IMO clock frequency setting</li>
+<li>Modulator clock divider</li>
+<li>Number of initial sub-conversions</li>
+<li>CIC2 hardware filter</li>
+<li>Hardware and software IIR filter configuration</li>
+<li>Inactive sensor connection</li>
+<li>Shield configuration (mode and count)</li>
+<li>Raw count calibration-level</li>
+<li>Sense clock configuration (divider and clock source)</li>
+<li>Number of sub-conversions</li>
+<li>Decimation rate</li>
+<li>GPIO configuration</li>
+<li>Sensor pins, CMOD pins, and shield pins</li>
+<li>Scan slots</li>
+<li>Initial touch and noise thresholds, debounce, and hysteresis</li>
+</ul>
+<ol>
+<li>Open the <strong>Device Configurator</strong> from the <strong>ModusToolbox&trade; for VS Code</strong> extension</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_launching_device_configurator_from_vscode_extension.png" alt="Selecting the Device Configurator from the ModusToolbox for VS Code extension" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="2">
+<li>Enable the CAPSENSE&trade; channel in <strong>Device Configurator</strong> and save the changes</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_device_configurator_tab.png" alt="Device configurator tab" style="width:1000px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="3">
+<li>Launch the CAPSENSE&trade; Configurator tool. In the <strong>Basic</strong> tab, configure the Button widgets and low-power widgets as ISX-RM</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_capsense_configurator_basics_tab.png" alt="CAPSENSE&trade; configurator-Basics tab" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="4">
+<li>Click <strong>Advanced → General tab</strong> to configure the initial CAPSENSE&trade; IMO clock frequency and divider as well as the initial filter settings:<ul>
+<li>Select <strong>CAPSENSE&trade; IMO Clock frequency</strong> as <strong>46 MHz</strong></li>
+<li>Set the <strong>Modulator clock divider</strong> to <strong>1</strong> to obtain the maximum available modulator clock frequency</li>
+<li>Set the <strong>Number of init sub-conversions</strong> based on the hint shown when you hover over the edit box. Retain the default value</li>
+<li>Use <strong>Wake-on-Touch settings</strong> to set the refresh rate and frame timeout while in the lowest power mode (Wake-on-Touch mode). Set <strong>the Wake-on-Touch scan interval (µs) based on the required low-power-state</strong> scan refresh rate. For example, to get a 16-Hz refresh rate, set the value to <strong>62500</strong></li>
+<li>Set the <strong>Number of frames in Wake-on-Touch</strong> as the maximum number of frames to be scanned in WoT mode if there is no touch detected. This determines the maximum time the device will be kept in the lowest-power mode if there is no user activity. Calculate the maximum time by multiplying this parameter by the <strong>Wake-on-Touch scan interval (µs)</strong> value. For example, to get 10 s as the maximum time in WoT mode, set the <strong>Number of frames in Wake-on-Touch</strong> to <strong>160</strong> for the scan interval set as 62500 µs</li>
+<li>Retain the default settings for all regular and low-power widget filters. The filters will be enabled or updated later, depending on the SNR requirements in <a href="#_Stage_3_–_1">Stage 3: Fine-tune for required SNR, power, and refresh rate</a>. The filters reduce the peak-to-peak noise, and using software filters results in a higher scan time</li>
+</ul>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_capsense_configurator_general_settings_tab.png" alt="CAPSENSE&trade; configurator-General settings tab" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="5">
+<li>Go to the ISX settings tab and adjust the Raw count calibration level (%), which helps to achieve the required CDAC calibration levels (35% of maximum count by default) for all ISX sensors, while maintaining the same sensitivity across the sensor elements</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_capsense_configurator_isx_settings_tab.png" alt="CAPSENSE&trade; configurator-ISX settings tab" style="width:616px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="6">
+<li>
+<p>Click <strong>Advanced → Widget Details</strong> tab. Select LowPower0 from the left pane, and then set the following:</p>
+<ul>
+<li>Sense clock divider: Retain the default value (this will be set in <a href="#_Stage_2_–">Stage 2: Set the Lx Clock Divider</a>)</li>
+<li>Clock source: Direct</li>
+<li>Number of sub-conversions: 60. ('60' is a good starting point to ensure a fast scan of time and a sufficient signal. This value is adjusted as required in <a href="#_Stage_3_–_1">Stage 3: Fine-tune for required SNR</a>, power, and refresh rate.)</li>
+<li>Finger threshold: 65535. The finger threshold is set to maximum to avoid waking up the device from the WoT mode due to touch detection; this is required to find the signal and SNR</li>
+<li>Noise threshold: 10</li>
+<li>Negative noise threshold: 10</li>
+<li>Low baseline reset: 10</li>
+<li>ON debounce: 3</li>
+</ul>
+</li>
+</ol>
+<p>These threshold values reduce the influence of the baseline on the sensor signal, which helps to get the true difference count. These parameters are set in <a href="#_Stage_4_–_1">Stage 4: Tune threshold parameters</a>.</p>
+<p>Next, select the other widgets from the left pane, and repeat the same configuration for each sensor.</p>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_capsense_configurator_widget_details_tab.png" alt="CAPSENSE&trade; configurator-Widget details tab" style="width:680px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="7">
+<li>
+<p>Go to the Scan Configuration tab to select the pins and the scan slots. Follow the steps below:</p>
+<ul>
+<li>Configure pins for the electrodes using the drop-down menu. Each sensor requires a minimum of one TX pin and one RX pin for inductive sensing operation. The connection can be seen below <div class="figure-images"><img src="assets/images/pins_used_for_the_inductive_sensor.png" alt="Pins used for the inductive sensor" style="width:317px; max-width:100%; height:auto; display:block; margin:0 auto;" /></div></li>
+<li>Configure the scan slots using the Auto-assign slots option. The other option is to allot each sensor a scan slot based on the entered slot number</li>
+<li>Check the notice list for warnings or errors <div class="figure-images"><img src="assets/images/isx_2_button_scan_configuration_tab.png" alt="Scan configuration tab" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" /></div></li>
+</ul>
+</li>
+<li>
+<p>Click <strong>Save</strong> to apply the settings</p>
+</li>
+</ol>
+<h4 id="stage-2-set-the-lx-clock-divider"><span id="_Stage_2_–"></span>Stage 2 – Set the Lx Clock Divider<a class="headerlink" href="#stage-2-set-the-lx-clock-divider" title="Permanent link">&para;</a></h4>
+<p>The Lx clock is derived from the modulator clock using a clock-divider and is used to scan the sensor. The Lx clock divider should be configured such that the pulse width of the sense clock is long enough to allow the sensor inductance to accumulate its energy completely while preventing prolonged charging, which will waste scan time. This is verified by observing the current waveforms of the sensor series resistance Rstx, using an oscilloscope and active probes.</p>
+<p>Follow the steps below to obtain the Lx clock divider value:</p>
+<ol>
+<li>Find the expected/approximate value of the Lx clock divider using the following equation</li>
+</ol>
+<div class="arithmatex">\[
+\begin{aligned}
+\mathrm{Lx\ Clock\ Div} &amp;= \frac{\mathrm{Ntau} \times \mathrm{Nphases} \times \mathrm{Fmod\ (MHz)} \times \mathrm{L\ (\mu H)}}{\mathrm{Rstx} + \mathrm{Rswitch} + \mathrm{Rinductor}} + \mathrm{Settling\ Shift} \\
+\mathrm{Lx\ Clock\ Div} &amp;= \frac{3 \times 4 \times 46 \times 34}{560 + 120} + 8 \\
+\mathrm{Lx\ Clock\ Div} &amp;= 4 \times \operatorname{round}\left(\frac{35.6}{4}\right) \\
+\mathrm{Lx\ Clock\ Div} &amp;&lt; 8 = 36
+\end{aligned}
+\]</div>
+<p>where,</p>
+<ul>
+<li><strong>Lx clock divider:</strong> Approximate value is obtained</li>
+<li><strong>Ntau:</strong> Settling constant. By default, set to 3</li>
+<li><strong>Nphases:</strong> Number of scan phases. Set to 4</li>
+<li><strong>Fmod (MHz):</strong> Modulator clock frequency in MHz. In this example, 46 MHz</li>
+<li><strong>L (µH):</strong> Obtain the inductance value using an LCR meter. For the buttons in this example, the value is around 34 µH</li>
+<li><strong>Rstx/Rext:</strong> The Tx resistor in series. 560 Ω in this kit</li>
+<li><strong>Rswitch/Rint:</strong> Internal switch resistance. The default value can be set as 100 Ω</li>
+<li><strong>Rinductor:</strong> This value can be obtained using the LCR meter while obtaining the inductance value. It must be included when the sensor is larger and can contribute to the total resistance value significantly</li>
+<li><strong>Settling Shift:</strong> Provide a shift to consider the actual settling time. The default value is 8. This can be changed based on oscilloscope observations</li>
+</ul>
+<p>This value serves only as a starting point for your measurements. Set the value in the CAPSENSE&trade; configurator.</p>
+<ol start="2">
+<li>Program the device from the <strong>ModusToolbox&trade; for VS Code extension</strong></li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_program_device.png" alt="Programming ISX 2 button example" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="3">
+<li>Open the <strong>CAPSENSE&trade; Tuner</strong> from the <strong>ModusToolbox&trade; for VS Code extension</strong></li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/launching_capsense_tuner.png" alt="" style="width:600px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="4">
+<li>Setup the I2C communication in the <strong>CAPSENSE&trade; Tuner</strong></li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_setup_tuner_comms.png" alt="" style="width:600px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="5">
+<li>Connect to the device and begin streaming. Select all widgets in the <strong>Widget Explorer</strong></li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_connect_and_stream.png" alt="" style="width:600px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="6">
+<li>Probe the Rstx resistor on both sides as shown below, and then perform a math function on the oscilloscope to obtain the approximate current flowing through the resistor
+Calculate M1 = (Ch4 - Ch3) / Rstx. On this kit, the value of Rstx is 560 Ω</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/probing_the_series_resistor.png" alt="Probing the series resistor" style="width:403px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="7">
+<li>Adjust the <strong>Lx clock divider</strong> from the <strong>Widget/Sensor Parameter</strong> view</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_adjust_lx_divider.png" alt="" style="width:400px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ul>
+<li>Ensure that the charging and discharging of the inductive sensor are not incomplete. If so, increase the Lx clock divider</li>
+</ul>
+<div class="figure-images">
+<img src="assets/images/improper_charge_cycle_of_a_sensor_with_incomplete_cycles.png" alt="Improper charge cycle of a sensor with incomplete cycles" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ul>
+<li>Ensure that the inductive sensor is not charging and discharging for a prolonged time. If so, decrease the Lx clock divider</li>
+</ul>
+<div class="figure-images">
+<img src="assets/images/improper_charge_cycle_of_a_sensor_with_prolonged_cycles.png" alt="Improper charge cycle of a sensor with prolonged cycles" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ul>
+<li>Adjust the Lx clock divider value such that the charging and discharging are just completed as shown below</li>
+</ul>
+<div class="figure-images">
+<img src="assets/images/correct_charge_cycle_of_a_sensor.png" alt="Correct charge cycle of a sensor" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="8">
+<li>Repeat this process for all the sensors. Each sensor might require a different Lx clock divider value to charge/discharge completely</li>
+</ol>
+<h4 id="stage-3-fine-tune-for-required-snr"><span id="_Stage_3_–_1"></span>Stage 3 – Fine-tune for required SNR<a class="headerlink" href="#stage-3-fine-tune-for-required-snr" title="Permanent link">&para;</a></h4>
+<p>The sensor should be tuned to have a minimum SNR of 10:1 and a minimum signal of 50 to ensure reliable operation. The sensitivity can be increased by increasing the number of sub-conversions, and noise can be decreased by enabling filters.</p>
+<p>The steps for optimising these parameters are as follows:</p>
+<ol>
+<li>
+<p>Find the number of sub-conversions for each widget based on your Lx Clock Divider and scan time values (800 µs in this example)</p>
+<div class="arithmatex">\[
+\mathrm{NumOfSubConv} = \operatorname{floor}\left(\frac{\mathrm{ScanTime}(\mathrm{us}) \times \mathrm{Fmod}(\mathrm{MHz})}{\mathrm{LxClkDiv}}\right)
+\]</div>
+<ul>
+<li>Lx Clock Divider = 36</li>
+<li>ScanTime (us) = 800 us</li>
+<li>Fmod (MHz) = 46 MHz (default)</li>
+</ul>
+</li>
+<li>
+<p>Switch to the <strong>SNR Measurement</strong> tab for measuring the SNR, select Button0 and Button0_Rx0_Lx0 sensor, and then click <strong>Acquire noise</strong> as shown below</p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_aquire_noise.png" alt="CAPSENSE&trade; tuner-SNR measurement: Acquire noise" style="width:1000px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="3">
+<li>
+<p>Once the noise is acquired, place the finger at a position on the button and then click <strong>Acquire signal</strong>. Ensure that the finger remains on the button if the signal acquisition is in progress. Observe that the SNR is greater than 10:1 and the signal count is above 50</p>
+</li>
+<li>
+<p>The calculated SNR on this button is displayed, as shown below. Based on the end system design, test the signal with a finger press force that matches the normal use case. Also, test using lighter presses that will be rejected by the system to ensure that they do not reach the finger threshold</p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_aquire_signal.png" alt="CAPSENSE&trade; tuner-SNR measurement: Acquire signal" style="width:1000px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="5">
+<li>
+<p>If the SNR is less than 10:1, increase the number of sub-conversions. Edit the number of sub-conversions (Nsub) directly in the Widget/Sensor parameters tab of the CAPSENSE&trade; tuner</p>
+</li>
+<li>
+<p>Apply the parameters to the device and measure SNR again to get the required SNR</p>
+<ul>
+<li>If the system is noisy (&gt; 40% of signal), enable the filters based on the type of noise</li>
+<li>Enable a hardware IIR filter to eliminate high-frequency noise. Set the filter coefficient value to ‘1’. Higher values of the coefficient provide better noise suppression but also slow down the touch response and need to be adjusted based on the requirements</li>
+<li>Enable the average filter (moving average) to eliminate periodic noise (i.e., noise from AC mains), if present</li>
+<li>Enable median filter to eliminate spike noise (i.e., motors and switching power supplies), if present</li>
+<li>Enable the CIC2 filter to increase resolution (recommended to enable this by default). Set the decimation rate to the maximal allowable value and leave the CIC2 accumulator shift value to Auto (widget hardware parameters)</li>
+</ul>
+</li>
+</ol>
+<p>This example has the CIC2 filter enabled, which increases the resolution for the same scan time. Whenever the CIC2 filter is enabled, it is recommended to enable the IIR filter for optimal noise reduction.</p>
+<ol start="7">
+<li>Open CAPSENSE&trade; Configurator from the ModusToolbox&trade; for VS Code extension and select the appropriate filter. Enable the filter based on the type of noise in your system and click Save, and program the device to update the filter settings</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/filter_settings_in_capsense_configurator.png" alt="Filter settings in CAPSENSE&trade; configurator" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<h4 id="stage-4-tune-threshold-parameters"><span id="_Stage_4_–_1"></span>Stage 4 – Tune threshold parameters<a class="headerlink" href="#stage-4-tune-threshold-parameters" title="Permanent link">&para;</a></h4>
+<p>Various thresholds, relative to the signal, need to be set for each sensor. Follow the steps below in the CAPSENSE&trade; tuner to set up the thresholds for a widget:</p>
+<ol>
+<li>
+<p>Switch to the <strong>Graph View</strong> tab and select Button0</p>
+</li>
+<li>
+<p>Touch the sensor and monitor the touch signal in the Sensor signal graph, as shown below</p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_touch_signal.png" alt="Sensor signal when the sensor is touched" style="width:1200px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="3">
+<li>
+<p>Note the signal measured and set the thresholds according to the following recommendations:</p>
+<ul>
+<li>Finger threshold: 80% of the signal</li>
+<li>Noise threshold: 40% of the signal</li>
+<li>Negative noise threshold: 40% of the signal</li>
+<li>Hysteresis: 10% of the signal</li>
+<li>Debounce: 3</li>
+</ul>
+</li>
+<li>
+<p>Set the threshold parameters in the Widget/Sensor parameters section of the CAPSENSE&trade; Tuner</p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_2_button_adjust_thresholds.png" alt="Widget threshold parameters" style="width:300px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th style="text-align: right;">Button0</th>
+<th style="text-align: right;">LowPower0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Signal</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">160</td>
+</tr>
+<tr>
+<td>Finger threshold</td>
+<td style="text-align: right;">200</td>
+<td style="text-align: right;">100</td>
+</tr>
+<tr>
+<td>Noise threshold</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr>
+<td>Negative noise threshold</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">40</td>
+</tr>
+<tr>
+<td>Low baseline reset</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr>
+<td>Hysteresis</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr>
+<td>ON debounce</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<ol start="5">
+<li>
+<p>For all the buttons, first configure the finger threshold to ‘65535’, which is the max value. Repeat steps 2 to 4 for all the buttons</p>
+</li>
+<li>
+<p>Apply the settings to the device by clicking <strong>Apply to Device</strong>, as shown below</p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/apply_settings_to_the_device.png" alt="Apply settings to the device" style="width:375px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="7">
+<li>Click <strong>Apply to Project</strong>, as shown below. The change is updated in the <strong>design.cycapsense</strong> file. Close CAPSENSE&trade; Tuner and launch CAPSENSE&trade; Configurator. All the changes in the CAPSENSE&trade; Tuner are reflected in the CAPSENSE&trade; Configurator</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/apply_settings_to_the_project.png" alt="Apply settings to the project" style="width:389px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<h3 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h3>
+<p>After applying the configuration test, the performance is tested by touching the button. If your sensor is tuned correctly, you will notice that the touch status changes from ‘0’ to ‘1’ in the Status panel of the <strong>Graph View</strong> tab.</p>
+<p>The status of the button is also indicated by LED1 in the kit; LED1 turns ON when the finger touches the button and turns OFF when the finger is removed.</p>
+<h3 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h3>
+<p>In this exercise, you tuned inductive sensing-based Touch-over-Metal keypad buttons. This low-power application demonstrates the recommended power states and transitions and the tuning flow for inductive-sensing buttons. You learned how to calibrate and tune inductive-sensing buttons for industrial applications using manual tuning and gained insight into using the ModusToolbox&trade; application in real time. You can follow this procedure to tune any touch-based HMI application for responsive performance using inductive sensing.</p>
+<h2 id="inductive-sensor-with-smart-sensing-tuning-procedure">Inductive sensor with smart sensing tuning procedure<a class="headerlink" href="#inductive-sensor-with-smart-sensing-tuning-procedure" title="Permanent link">&para;</a></h2>
+<h3 id="objective_1">Objective<a class="headerlink" href="#objective_1" title="Permanent link">&para;</a></h3>
+<p>The objective of this exercise is to learn how to use the Inductive sensing (ISX) with the smart sensing tuning process. The MSCLP Inductive Sensing Touch over Metal Keypad-4 example project will have the device configured for optimal inductive sensor tuning, but tweaks can be made to show how each setting impacts the sensitivity of the sensors.
+The smart sensing algorithm is a tuning method that automatically sets sensing parameters for optimal performance, based on user-specified inductance values, and continuously compensates for system, manufacturing, and environmental changes. Smart sensing reduces design cycle time and ensures performance is independent of PCB variations compared to a manual tuning procedure.</p>
+<h3 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h3>
+<p>To tune the inductive sensor, follow the performance tuning procedure described below. The process is divided into three stages.</p>
+<ul>
+<li><a href="#_Stage_1_–_1">Set the initial hardware parameters</a></li>
+<li><a href="#_Stage_2_–_2">Fine-tune for the required SNR</a></li>
+<li><a href="#_Stage_3_–">Tune threshold parameters</a></li>
+</ul>
+<div class="figure-images">
+<img src="assets/images/smart_sensing_widget_tuning_flow.png" alt="Smart sensing widget tuning flow" style="width:322px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<h3 id="project-creation_1">Project creation<a class="headerlink" href="#project-creation_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Before creating the first project in this training series, create the workspace. Open <strong>VS Code</strong> from the <strong>Windows Start</strong> menu</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> If you have not installed ModusToolbox&trade; along with the ModusToolbox&trade; for VS Code extension, see the <a href="#_Required_development_tools">Required development tools</a> section.</p>
+</blockquote>
+<p><img src="assets/images/running_vs_code_from_the_windows_11_search_bar.png" alt="Running VS Code from the Windows 11 Search Bar" style="width:368px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="2">
+<li>Open a <strong>workspace directory</strong> for your project in VS Code</li>
+</ol>
+<p><img src="assets/images/opening_vs_code_workspace.png" alt="Opening VS Code Workspace" style="width:466px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="3">
+<li>Click <strong>File &gt; Open Folder</strong> and choose your workspace directory or create a new folder</li>
+<li>Click <strong>Select Folder</strong> to open the workspace directory in VS Code</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> Open the workspace in trusted mode. If the default workspace trust is restricted mode, click <strong>Restricted Mode</strong> in the bottom left and change to trust this folder.</p>
+</blockquote>
+<p><img src="assets/images/workspace_opened_in_restricted_mode.png" alt="Opening VS Code Workspace" style="width:738px; height:auto; display:block; margin:0 auto;" /></p>
+<p><img src="assets/images/opening_workspace_in_trusted_mode.png" alt="Opening VS Code Workspace" style="width:1200px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="5">
+<li>Open the <strong>Command Palette</strong> by pressing <strong>Ctrl+Shift+P</strong></li>
+<li>Search for <strong>Infineon ModusToolbox&trade;: Show Main Page</strong> and select it</li>
+<li>Open the <strong>Infineon ModusToolbox&trade; for VS Code</strong> main page</li>
+</ol>
+<p><img src="assets/images/modustoolbox_for_vs_code_main_page.png" alt="ModusToolbox for VS Code Main Page" style="width:1200px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="8">
+<li>Navigate to the <strong>Create Project</strong> tab and click <strong>Launch Project Creation</strong></li>
+<li>The <strong>Project Creator Tool</strong> opens and prompts you to choose a <strong>BSP</strong> (Board Support Package). Select the <strong>CY8CPROTO-040T-MS BSP</strong> under the <strong>PSOC&trade; 4 BSPs</strong>, and continue to the application selection</li>
+</ol>
+<blockquote>
+<p><strong>Note:</strong> BSPs are aligned with the development and evaluation kits; they provide files for basic device functionality. A BSP typically has a <strong>design.modus</strong> file that configures clocks and other board-specific capabilities. That file is used by the ModusToolbox&trade; configurators. A BSP also includes the required device support code for the device on the board. You can modify the configuration to suit your application.</p>
+</blockquote>
+<p><img src="assets/images/select_the_cy8proto_040t_ms_bsp.png" alt="Project Creator BSP Selection" style="width:1016px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="10">
+<li>Select the <strong>MSCLP Inductive Sensing Touch over Metal Keypad-4</strong> under the <strong>Sensing</strong> section, choose a project directory, and create the project</li>
+</ol>
+<p><img src="assets/images/isx_4_button_project_creator_example_code_project_creation.png" alt="Project Creator application selection" style="width:1016px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="11">
+<li>When project creation is complete, it will prompt you to <strong>Load Project</strong>. Do this so that the VS Code workspace for the new project is loaded</li>
+</ol>
+<p><img src="assets/images/isx_4_button_load_project_vscode.png" alt="Load Project in VS Code" style="width:400px; height:auto; display:block; margin:0 auto;" /></p>
+<ol start="12">
+<li>Once the workspace is loaded, the ModusToolbox&trade; application view provides actions to build, clean, erase, program, and configure the device</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_4_button_vscode_mtb_extension.png" alt="MSCLP inductive sensing project in the ModusToolbox VS Code extension" style="width:1200px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<blockquote>
+<p><strong>Note:</strong> The ModusToolbox&trade; for VS Code extension may display buttons indicating that the VS Code tasks and settings need to be updated. Simply click the buttons to correct the issues. This is a minor version mismatch between the ModusToolbox&trade; tools and the VS Code extension and does not affect functionality.</p>
+</blockquote>
+<p><img src="assets/images/vscode_fix_settings_and_tasks.png" alt="VS Code extension prompting to fix tasks and settings" style="width:800px; height:auto; display:block; margin:0 auto;" /></p>
+<h3 id="calibration-procedure_1">Calibration procedure<a class="headerlink" href="#calibration-procedure_1" title="Permanent link">&para;</a></h3>
+<h4 id="stage-1-set-the-initial-hardware-parameters_1"><span id="_Stage_1_–_1"></span>Stage 1 – Set the initial hardware parameters<a class="headerlink" href="#stage-1-set-the-initial-hardware-parameters_1" title="Permanent link">&para;</a></h4>
+<p>The initial hardware parameters include the following:</p>
+<ul>
+<li>CAPSENSE&trade; IMO clock frequency setting</li>
+<li>Modulator clock divider</li>
+<li>Number of initial sub-conversions</li>
+<li>CIC2 hardware filter</li>
+<li>Hardware and software IIR filter configuration</li>
+<li>Inactive sensor connection</li>
+<li>Shield configuration (mode and count)</li>
+<li>Raw count calibration level</li>
+<li>Sense clock configuration (divider and clock source)</li>
+<li>Number of sub-conversions</li>
+<li>Decimation rate</li>
+<li>GPIO configuration</li>
+<li>Sensor pins, CMOD pins, and shield pins</li>
+<li>Scan slots</li>
+<li>Initial touch and noise thresholds, debounce, and hysteresis</li>
+</ul>
+<ol>
+<li>Open the <strong>CAPSENSE&trade; Configurator</strong> from the <strong>ModusToolbox&trade; for VS Code</strong> extension</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/launching_capsense_configurator.png" alt="Selecting the Device Configurator from the ModusToolbox for VS Code extension" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="2">
+<li>In the <strong>Basic</strong> tab, configure the Button widgets and low-power widgets as ISX-RM as shown below. Set the Tuning Mode as SMARTSENSE - HW parameters for the low power widgets and SMARTSENSE - Full for the regular widgets. In the <strong>SMARTSENSE - HW parameters mode</strong>, set the thresholds manually. In the <strong>SMARTSENSE - Full mode</strong>, set the thresholds using the middleware. However, this mode is not available for low-power widgets
+Keep the touch sensitivity at its default value of 0.16 µH. The touch sensitivity is the minimum delta in inductance that the system is tuned for by the smart sense</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_4_button_capsense_configurator_basics_tab.png" alt="CAPSENSE&trade; configurator-Basics tab" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="3">
+<li>
+<p>Open the <strong>Advanced → General tab</strong> to configure the initial CAPSENSE&trade; IMO clock frequency and divider as well as the initial filter settings</p>
+<ul>
+<li>Select <strong>CAPSENSE&trade; IMO Clock frequency</strong> as <strong>46 MHz</strong></li>
+<li>Set the <strong>Modulator clock divider</strong> to <strong>1</strong> to obtain the maximum available modulator clock frequency</li>
+<li>Set the <strong>Number of init sub-conversions</strong> based on the hint shown when you hover over the edit box. Retain the default value</li>
+<li>Use <strong>Wake-on-Touch settings</strong> to set the refresh rate and frame timeout while in the lowest power mode (Wake-on-Touch mode). Set <strong>the Wake-on-Touch scan interval (µs) based on the required low-power-state</strong> scan refresh rate. For example, to achieve a 16-Hz refresh rate, set the value to <strong>62500</strong></li>
+<li>Set the <strong>Number of frames in Wake-on-Touch</strong> as the maximum number of frames to be scanned in WoT mode if there is no touch detected. This determines the maximum time the device will be kept in the lowest-power mode if there is no user activity. Calculate the maximum time by multiplying this parameter by the <strong>Wake-on-Touch scan interval (µs)</strong> value</li>
+<li>For example, to get 10 s as the maximum time in WoT mode, set the <strong>Number of frames in Wake-on-Touch</strong> to <strong>160</strong> for the scan interval set as 62500 µs</li>
+<li>Retain the default settings for all regular and low-power widget filters. The filters will be enabled or updated later, depending on the SNR requirements in <a href="#_Stage_2_–_2">Stage 2: Fine-tune for required SNR</a>. The filters reduce the peak-to-peak noise, and using software filters results in a higher scan time</li>
+</ul>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/capsense_configurator_general_settings_tab.png" alt="CAPSENSE&trade; configurator-General settings tab" style="width:600px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="4">
+<li>Go to the ISX settings tab and adjust the Raw count calibration level (%), which helps to achieve the required CDAC calibration levels (35% of maximum count by default) for all ISX sensors, while maintaining the same sensitivity across the sensor elements</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/capsense_configurator_isx_settings_tab.png" alt="CAPSENSE&trade; configurator-ISX settings tab" style="width:800px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<blockquote>
+<p><strong>Note:</strong> When tuning a low-power sensor, go to the <strong>Advanced → Widget</strong> Details tab. Select a low-power sensor from the left pane, and then set the following:</p>
+<ul>
+<li><strong>Finger threshold</strong>: 65535. This is set to maximum to avoid waking up the device from the WoT mode due to touch detection; this is required to find the signal and SNR</li>
+<li><strong>Noise threshold</strong>: 10</li>
+<li><strong>Negative noise threshold</strong>: 10</li>
+<li><strong>Low baseline reset</strong>: 10</li>
+<li><strong>ON debounce</strong>: 3</li>
+</ul>
+<p>These threshold values reduce the influence of the baseline on the sensor signal, which helps to get the true difference count. These parameters are set in <a href="#_Stage_3_–">Stage 3: Tune threshold parameters</a>.</p>
+<p><div class="figure-images">
+<img src="assets/images/isx_4_button_capsense_configurator_widget_details_tab.png" alt="CAPSENSE&trade; configurator-Widget details tab" style="width:595px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div></p>
+</blockquote>
+<ol start="5">
+<li>
+<p>Go to the <strong>Scan Configuration</strong> tab to select the pins and the scan slots and do the following:</p>
+<ul>
+<li>Configure pins for the electrodes using the drop-down menu</li>
+<li>Configure the scan slots using the Auto-assign slots option. The other option is to allot each sensor a scan slot based on the entered slot number</li>
+<li>Check the notice list for warnings or errors</li>
+</ul>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_4_button_scan_configurations_tab.png" alt="Scan configurations tab" style="width:625px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="6">
+<li>Click <strong>Save</strong> to apply the settings</li>
+</ol>
+<p><span id="_Stage_2_–_2"></span></p>
+<h4 id="stage-2-fine-tune-for-required-snr">Stage 2 – Fine-tune for required SNR<a class="headerlink" href="#stage-2-fine-tune-for-required-snr" title="Permanent link">&para;</a></h4>
+<p>Tune the sensor to have a minimum SNR of 10:1 and a minimum signal of 50 to ensure reliable operation. Increase the sensitivity by decreasing the touch sensitivity value (the minimum delta inductance that the system should detect) in the configurator and decrease noise by enabling filters. The touch sensitivity in this code example is set at 0.1 µH.</p>
+<ol>
+<li>
+<p>Measure the SNR as mentioned in the <a href="#_Stage_3_–_1">Stage 3 - Fine-tune for required SNR</a> section for all widgets</p>
+</li>
+<li>
+<p>If the SNR is less than 10:1, decrease the touch sensitivity value. You can find this value in the <strong>Advanced→Widget Details</strong> tab</p>
+</li>
+<li>
+<p>Load the parameters to the device and measure the SNR again</p>
+</li>
+<li>
+<p>Repeat steps <strong>1</strong> to <strong>3</strong> until the following conditions are met:</p>
+<ul>
+<li>Measured SNR from the previous stage is greater than 10:1</li>
+<li>Signal count is greater than 50</li>
+</ul>
+</li>
+<li>
+<p>If the system is noisy (&gt; 40% of signal), enable the filters based on the type of noise</p>
+<ul>
+<li>This example has the CIC2 filter enabled, which increases the resolution for the same scan time. Whenever a CIC2 filter is enabled, it is recommended to enable the IIR filter for optimal noise reduction</li>
+</ul>
+</li>
+<li>
+<p>Open CAPSENSE&trade; Configurator from the ModusToolbox&trade; for VS Code extension and select the appropriate filter as shown below</p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_4_button_filter_settings_in_capsense_configurator.png" alt="Filter settings in CAPSENSE&trade; Configurator" style="width:623px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="7">
+<li>Click <strong>Save</strong> and program the device to update the filter settings</li>
+</ol>
+<h4 id="stage-3-tune-threshold-parameters"><span id="_Stage_3_–"></span>Stage 3 – Tune threshold parameters<a class="headerlink" href="#stage-3-tune-threshold-parameters" title="Permanent link">&para;</a></h4>
+<p>In the SMARTSENSE - HW parameter tuning mode, the various thresholds, relative to the signal, need to be set for each low-power widget. For the regular widgets, the threshold parameters are automatically set by the SMARTSENSE - Full tuning mode.</p>
+<p>Perform the following in CAPSENSE&trade; Tuner to set up the thresholds for a low-power widget:</p>
+<ol>
+<li>
+<p>Switch to the <strong>Graph View</strong> tab and select Button0</p>
+</li>
+<li>
+<p>Press the sensor and monitor the touch signal in the Sensor signal graph, as shown below</p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_4_button_touch_signal.png" alt="Sensor signal when the sensor is touched" style="width:1200px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="3">
+<li>
+<p>Note that when tuning low-power sensors with the smart sense enabled, the touch thresholds must be manually tuned. Measure the signal and set the thresholds according to the following recommendations:</p>
+<ul>
+<li><strong>Finger threshold</strong>: 80% of the signal</li>
+<li><strong>Noise threshold</strong>: 40% of the signal</li>
+<li><strong>Negative noise threshold</strong>: 40% of the signal</li>
+<li><strong>Debounce</strong>: 3</li>
+</ul>
+</li>
+<li>
+<p>Adjust the touch sensitivity in the Widget/Sensor parameters section of the CAPSENSE&trade; Tuner:</p>
+</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/isx_4_button_widget_threshold_parameters.png" alt="Widget threshold parameters" style="width:358px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="5">
+<li>Apply the settings to the device by clicking <strong>Apply to Device</strong>, as shown below</li>
+</ol>
+<div class="figure-images">
+<img src="assets/images/apply_settings_to_the_device.png" alt="Apply settings to the device" style="width:375px; max-width:100%; height:auto; display:block; margin:0 auto;" />
+</div>
+
+<ol start="6">
+<li>
+<p>Apply the settings to the project by clicking <strong>Apply to Project</strong>, as shown below</p>
+</li>
+<li>
+<p>The change is updated in the design.cycapsense file. Close CAPSENSE&trade; Tuner and launch CAPSENSE&trade; Configurator. All the changes in the CAPSENSE&trade; Tuner are reflected in the CAPSENSE&trade; Configurator</p>
+</li>
+</ol>
+<h3 id="output_1">Output<a class="headerlink" href="#output_1" title="Permanent link">&para;</a></h3>
+<p>After applying the configuration, test the performance by touching the button. If your sensor is tuned correctly, you will observe the touch status go from 0 to 1 in the Status panel of the Graph View tab. The status of the button is also indicated by LED2 in the kit; LED2 turns ON when the finger touches the button and turns OFF when the finger is removed.</p>
+<h3 id="conclusion_1">Conclusion<a class="headerlink" href="#conclusion_1" title="Permanent link">&para;</a></h3>
+<p>In this exercise, you tuned an inductive sensing-based Touch-over-Metal keypad button. This low-power application demonstrates the recommended power states and transitions and the smart sensing tuning flow for inductive-sensing buttons. You learned how smart sensing simplifies inductive sensing tuning for industrial applications and gained insight into using the ModusToolbox&trade; application in real time. You can follow this procedure to tune any touch-based HMI application for responsive performance using inductive sensing.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Infineon Technologies AG: AN239751: Flyback inductive sensing (ISX) design guide; <a href="https://www.infineon.com/row/public/documents/30/42/infineon-an239751-flyback-inductive-sensing-isx-design-guide-applicationnotes-en.pdf">Available online</a></li>
+</ol>
+<h2 id="revision-history">Revision history<a class="headerlink" href="#revision-history" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Document revision</th>
+<th style="text-align: left;">Date</th>
+<th style="text-align: left;">Description of changes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">**</td>
+<td style="text-align: left;">2025-12-11</td>
+<td style="text-align: left;">Initial release</td>
+</tr>
+<tr>
+<td style="text-align: left;">*A</td>
+<td style="text-align: left;">2026-04-07</td>
+<td style="text-align: left;">Updated to align with Empower template.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="disclaimer">Disclaimer<a class="headerlink" href="#disclaimer" title="Permanent link">&para;</a></h2>
+<p>All referenced product or service names and trademarks are the property of their respective owners.</p>
+<p>The Bluetooth&reg; word mark and logos are registered trademarks owned by Bluetooth SIG, Inc., and any use of such marks by Infineon is under license.</p>
+<p>PSOC&trade;, formerly known as PSoC&trade;, is a trademark of Infineon Technologies. Any references to PSoC&trade; in this document or others shall be deemed to refer to PSOC&trade;.</p>
+<hr />
+<p>© Cypress Semiconductor Corporation, 2023-2026. This document is the property of Cypress Semiconductor Corporation, an Infineon Technologies company, and its affiliates ("Cypress").  This document, including any software or firmware included or referenced in this document ("Software"), is owned by Cypress under the intellectual property laws and treaties of the United States and other countries worldwide.  Cypress reserves all rights under such laws and treaties and does not, except as specifically stated in this paragraph, grant any license under its patents, copyrights, trademarks, or other intellectual property rights.  If the Software is not accompanied by a license agreement and you do not otherwise have a written agreement with Cypress governing the use of the Software, then Cypress hereby grants you a personal, non-exclusive, nontransferable license (without the right to sublicense) (1) under its copyright rights in the Software (a) for Software provided in source code form, to modify and reproduce the Software solely for use with Cypress hardware products, only internally within your organization, and (b) to distribute the Software in binary code form externally to end users (either directly or indirectly through resellers and distributors), solely for use on Cypress hardware product units, and (2) under those claims of Cypress's patents that are infringed by the Software (as provided by Cypress, unmodified) to make, use, distribute, and import the Software solely for use with Cypress hardware products.  Any other use, reproduction, modification, translation, or compilation of the Software is prohibited.
+<br>
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, CYPRESS MAKES NO WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, WITH REGARD TO THIS DOCUMENT OR ANY SOFTWARE OR ACCOMPANYING HARDWARE, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.  No computing device can be absolutely secure.  Therefore, despite security measures implemented in Cypress hardware or software products, Cypress shall have no liability arising out of any security breach, such as unauthorized access to or use of a Cypress product. CYPRESS DOES NOT REPRESENT, WARRANT, OR GUARANTEE THAT CYPRESS PRODUCTS, OR SYSTEMS CREATED USING CYPRESS PRODUCTS, WILL BE FREE FROM CORRUPTION, ATTACK, VIRUSES, INTERFERENCE, HACKING, DATA LOSS OR THEFT, OR OTHER SECURITY INTRUSION (collectively, "Security Breach").  Cypress disclaims any liability relating to any Security Breach, and you shall and hereby do release Cypress from any claim, damage, or other liability arising from any Security Breach.  In addition, the products described in these materials may contain design defects or errors known as errata which may cause the product to deviate from published specifications. To the extent permitted by applicable law, Cypress reserves the right to make changes to this document without further notice. Cypress does not assume any liability arising out of the application or use of any product or circuit described in this document. Any information provided in this document, including any sample design information or programming code, is provided only for reference purposes.  It is the responsibility of the user of this document to properly design, program, and test the functionality and safety of any application made of this information and any resulting product.  "High-Risk Device" means any device or system whose failure could cause personal injury, death, or property damage.  Examples of High-Risk Devices are weapons, nuclear installations, surgical implants, and other medical devices.  "Critical Component" means any component of a High-Risk Device whose failure to perform can be reasonably expected to cause, directly or indirectly, the failure of the High-Risk Device, or to affect its safety or effectiveness.  Cypress is not liable, in whole or in part, and you shall and hereby do release Cypress from any claim, damage, or other liability arising from any use of a Cypress product as a Critical Component in a High-Risk Device. You shall indemnify and hold Cypress, including its affiliates, and its directors, officers, employees, agents, distributors, and assigns harmless from and against all claims, costs, damages, and expenses, arising out of any claim, including claims for product liability, personal injury or death, or property damage arising from any use of a Cypress product as a Critical Component in a High-Risk Device. Cypress products are not intended or authorized for use as a Critical Component in any High-Risk Device except to the limited extent that (i) Cypress's published data sheet for the product explicitly states Cypress has qualified the product for use in a specific High-Risk Device, or (ii) Cypress has given you advance written authorization to use the product as a Critical Component in the specific High-Risk Device and you have signed a separate indemnification agreement.
+<br>
+Cypress, the Cypress logo, and combinations thereof, ModusToolbox, PSoC, CAPSENSE, EZ-USB, F-RAM, and TRAVEO are trademarks or registered trademarks of Cypress or a subsidiary of Cypress in the United States or in other countries. For a more complete list of Cypress trademarks, visit www.infineon.com. Other names and brands may be claimed as property of their respective owners.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="index.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Home">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.top", "navigation.footer", "navigation.expand", "toc.integrate", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="javascripts/collapsible.js"></script>
+      
+        <script src="javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
